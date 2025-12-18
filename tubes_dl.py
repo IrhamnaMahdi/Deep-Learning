@@ -1,3 +1,9 @@
+import streamlit as st
+import pandas as pd
+import numpy as np
+from tensorflow.keras.models import load_model
+import pickle
+
 # Konfigurasi halaman
 st.set_page_config(
     page_title="Prediksi Tingkat Stress Mahasiswa",
@@ -315,3 +321,4 @@ st.markdown("""
 </div>
 
 """, unsafe_allow_html=True)
+
