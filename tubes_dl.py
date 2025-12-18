@@ -54,7 +54,7 @@ def convert_physical_health(value):
 @st.cache_resource
 def load_models():
     try:
-        model = load_model('model_stres_rmsprop_best.h5')
+        model = load_model('model_stres_rmsprop_best.h5', compile=False)
         with open('scaler.pkl', 'rb') as f:
             scaler = pickle.load(f)
         with open('label_encoder.pkl', 'rb') as f:
@@ -86,7 +86,9 @@ with st.sidebar:
     """)
     
     st.markdown("---")
-    st.markdown("**Developed by:** Tim Peneliti")
+    st.markdown("""**Developed by:** Balqis Dwian Fitri Zamzami (121450018), 
+                                     Irhamna Mahdi (122450049),
+                                     Amalia Melani Putri (122450122)""")
 
 # Load models
 model, scaler, le = load_models()
@@ -321,4 +323,5 @@ st.markdown("""
 </div>
 
 """, unsafe_allow_html=True)
+
 
